@@ -385,7 +385,14 @@
                                             <td>{{ $item->gender }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->phone }}</td>
-                                            <td>Tombol Edit & Tombol Hapus</td>
+                                            <td>
+                                                <a href="{{ route('pelanggan.edit', $item->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                                <form action="{{ route('pelanggan.destroy', $item->id) }}" method="POST" style="display: inline;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endforeach
 
