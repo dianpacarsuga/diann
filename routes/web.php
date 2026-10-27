@@ -1,19 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\QuestionController;
-use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\PortofolioDianController;
 
-// Route untuk Halaman Utama
-Route::get('/', [HomeController::class, 'index']);
-
-// Route untuk Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-// Route untuk Store Question
-Route::post('question/store', [QuestionController::class, 'store'])->name('question.store');
-
-// Route untuk Pelanggan
-Route::resource('pelanggan', PelangganController::class);
+Route::get('/', [PortofolioDianController::class, 'index'])->name('cv');
+Route::get('/admin', [PortofolioDianController::class, 'admin'])->name('admin');
+Route::post('/admin/save', [PortofolioDianController::class, 'storeOrUpdate'])->name('admin.save');
+Route::delete('/admin/delete/{id}', [PortofolioDianController::class, 'destroy'])->name('admin.delete');
