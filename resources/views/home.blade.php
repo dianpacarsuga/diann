@@ -165,11 +165,11 @@
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control"name="email">
+                <input type="text" class="form-control" name="email">
             </div>
             <div class="mb-3">
                 <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                <textarea class="form-control" rows="4"name="pertayaan" ></textarea>
+                <textarea class="form-control" name="pertanyaan" rows="4"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
         </form>

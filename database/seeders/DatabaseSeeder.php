@@ -10,9 +10,9 @@ class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Seed the application's database.
-     */
+    use App\Models\User;
+    use Illuminate\Database\Seeder;
+
     public function run(): void
     {
         // User::factory(10)->create();

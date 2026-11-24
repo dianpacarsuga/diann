@@ -98,7 +98,16 @@
                         <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
-
+                <li class="nav-item  active ">
+                    <a href="" class="nav-link">
+                        <span class="sidebar-icon">
+                            <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"></path>
+                            </svg>
+                        </span>
+                        <span class="sidebar-text">Pelanggan</span>
+                    </a>
+                </li>
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
                 <li class="nav-item">
                     <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/" target="_blank" class="nav-link d-flex align-items-center">
@@ -283,12 +292,12 @@
         </div>
 
         <div class="row">
-            <div class="col-12 mb-4">
+            <div class="col-12 mb-4">                
                 <div class="card border-0 shadow components-section">
                     <div class="card-body">
                         <form action="{{ route('pelanggan.store') }}" method="POST">
                             @csrf
-                            <div class="row mb-4">
+                            <div class="row mb-4">                                    
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- First Name -->
                                     <div class="mb-3">
@@ -307,13 +316,13 @@
                                     <!-- Birthday -->
                                     <div class="mb-3">
                                         <label for="birthday" class="form-label">Birthday</label>
-                                        <input type="date" id="birthday" name="birthday" class="form-control">
+                                        <input type="date" id="birthday" class="form-control" name="birthday">
                                     </div>
 
                                     <!-- Gender -->
                                     <div class="mb-3">
                                         <label for="gender" class="form-label">Gender</label>
-                                        <select id="gender" name="gender" class="form-select">
+                                        <select id="gender" name="gender" class="form-select" name="gender" required>
                                             <option value="">-- Pilih --</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -326,7 +335,7 @@
                                     <!-- Email -->
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" id="email" class="form-control" name="email" required>
+                                        <input type="text" id="email" class="form-control" name="email" required>
                                     </div>
 
                                     <!-- Phone -->
